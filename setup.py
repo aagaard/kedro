@@ -142,8 +142,6 @@ extras_require = {
     **yaml_require,
 }
 
-extras_require["all"] = _collect_requirements(extras_require)
-
 setup(
     name=name,
     version=version,
@@ -155,7 +153,6 @@ setup(
     python_requires=">=3.7, <3.10",
     packages=find_packages(exclude=["docs*", "tests*", "tools*", "features*"]),
     include_package_data=True,
-    tests_require=test_requires,
     install_requires=requires,
     author="QuantumBlack Labs",
     entry_points={"console_scripts": ["kedro = kedro.framework.cli:main"]},
@@ -169,6 +166,5 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-    ],
-    extras_require=extras_require,
+    ]
 )
