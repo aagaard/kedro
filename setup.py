@@ -152,7 +152,7 @@ setup(
     url="https://github.com/quantumblacklabs/kedro",
     python_requires=">=3.7, <3.11",
     packages=find_packages(exclude=["docs*", "tests*", "tools*", "features*"]),
-    include_package_data=True,
+    include_package_data=False,
     install_requires=requires,
     author="QuantumBlack Labs",
     entry_points={"console_scripts": ["kedro = kedro.framework.cli:main"]},
